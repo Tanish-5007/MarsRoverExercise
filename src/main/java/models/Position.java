@@ -1,3 +1,5 @@
+package models;
+
 public class Position{
 
     private int x;
