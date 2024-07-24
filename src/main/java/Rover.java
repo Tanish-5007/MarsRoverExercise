@@ -33,4 +33,19 @@ public class Rover{
         logger.info("Rover moved to " + position.getX() + ", " + position.getY());
     }
 
+    public void turnLeft() {
+        direction = direction.turnLeft();
+        logger.info("Rover turned left, now facing " + direction);
+    }
+
+    public void turnRight() {
+        direction = direction.turnRight();
+        logger.info("Rover turned right, now facing " + direction);
+    }
+
+    public String getStatusReport() {
+        return String.format("Rover is at (%d, %d) facing %s.",
+                position.getX(), position.getY(), direction);
+    }
+
 }
